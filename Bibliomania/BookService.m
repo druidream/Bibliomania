@@ -27,7 +27,9 @@
         if (![psc addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
             @throw [NSException exceptionWithName:@"OpenFailure" reason:[error localizedDescription] userInfo:nil];
         }
-        _context = [[NSManagedObjectContext alloc] init];
+//        _context = [[NSManagedObjectContext alloc] init];
+        _context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+
         _context.persistentStoreCoordinator = psc;
     }
     return self;
@@ -47,6 +49,14 @@
     item.name = @"chapter 1";
     item.id = @1;
     return item;
+}
+
+- (void)updateBook: (BookItem *)book {
+    // TODO
+}
+
+- (void)deleteBook: (BookItem *)book {
+    // TODO
 }
 
 - (NSArray *)retrieveBook: (BookItem *)book

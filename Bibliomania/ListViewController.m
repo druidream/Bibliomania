@@ -10,19 +10,23 @@
 #import "BookService.h"
 #import "Chapter.h"
 #import "Chapter+CoreDataProperties.h"
+#import "BMScanViewController.h"
+#import "BMDoubanJSONResult.h"
 
 #ifndef __OPTIMIZE__
 #import "RRFPSBar.h"
 #endif
-@interface ListViewController ()
+@interface ListViewController () <BMScanViewControllerDelegate>
 
-@property (nonatomic, readonly, copy) NSArray *bookItems;
+@property (nonatomic, copy) NSArray *bookItems;
 @property (nonatomic, strong) BookService *bookService;
 
 @end
 
 @implementation ListViewController
 @synthesize bookItems, bookService;
+
+static NSString * const CELL_IDENTIFIER = @"bookItemCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -57,12 +61,20 @@
     NSLog(@"%@", chapter.name);
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"scan"]) {
+        BMScanViewController *vc = (BMScanViewController *)segue.destinationViewController;
+        vc.delegate = self;
+    }
+}
+
 #pragma mark - TableView delegates
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CELL_IDENTIFIER];
     }
     
     BookItem *bookItem = [bookItems objectAtIndex:indexPath.row];
@@ -80,10 +92,6 @@
     return bookItems.count;
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 70;
 }
@@ -92,5 +100,38 @@
     UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"BookDetailViewController"];
     [self.navigationController pushViewController:vc animated:YES];
 }
+
+#pragma mark - BMScanViewControllerDelegate
+
+- (void)scanningDidEnd:(NSArray *)bookResultItems {
+//    NSLog(@"... scanningDidEnd : %@", bookResultItems);
+    for (BMDoubanJSONResult *bookResultItem in bookResultItems) {
+        
+        BookItem *book = [bookService createBook];
+        [book setName:bookResultItem.title];
+        
+        NSArray *chapterResultItems = [self chaptersFromCatalog:bookResultItem.catalog];
+        NSMutableSet *chapters = [[NSMutableSet alloc] init];
+        for (NSString *chapterResultItem in chapterResultItems) {
+            Chapter *chapter = [bookService createChapter];
+            chapter.name = chapterResultItem;
+            
+            [chapters addObject:chapter];
+        }
+        [book setChapters:chapters];
+    }
+    [bookService saveChanges];
+    
+    self.bookItems = [bookService retrieveBooks];
+    [self.tableView reloadData];
+}
+
+#pragma mark -
+
+- (NSArray *)chaptersFromCatalog:(NSString *)catalog {
+    
+    return [catalog componentsSeparatedByString:@"\n"];
+}
+
 
 @end

@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol BMScanViewControllerDelegate <NSObject>
+
+- (void)scanningDidEnd:(NSArray *)bookItems;
+
+@end
+
 @interface BMScanViewController : UIViewController
+
+@property (nonatomic, weak) id<BMScanViewControllerDelegate> delegate;
 
 @end

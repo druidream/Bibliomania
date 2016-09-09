@@ -17,7 +17,7 @@
 {
     AVCaptureSession * session;//输入输出的中间桥梁
 }
-@property (nonatomic, copy) NSMutableArray *bookItems;
+@property (nonatomic, strong) NSMutableArray *bookItems;
 
 @end
 
@@ -66,31 +66,38 @@
         AVMetadataMachineReadableCodeObject * metadataObject = [metadataObjects objectAtIndex : 0];
         //输出扫描字符串
 //        NSLog(@"%@",metadataObject.stringValue);
-//        dispatch_async(dispatch_get_global_queue(0, 0), ^{
-//            [self p_resolveISBN:metadataObject.stringValue];
-//        });
+
         DoubanISBNResolver *resolver = [[DoubanISBNResolver alloc] init];
         [resolver resolve:metadataObject.stringValue completion:^(id responseData) {
 //            NSLog(@"... responseString : %@", responseString);
             if ([responseData isKindOfClass:[NSDictionary class]]) {
                 BMDoubanJSONResult *result = [[BMDoubanJSONResult alloc] initWithDictionary:responseData error:nil];
 //                NSLog(@"... response dic : %@", result);
-                self.bookItems
+                [self.bookItems addObject:result];
             } else if ([responseData isKindOfClass:[NSString class]]) {
                 BMDoubanJSONResult *result = [[BMDoubanJSONResult alloc] initWithString:responseData error:nil];
                 NSLog(@"... response str : %@", result);
+                [self.bookItems addObject:result];
             }
         }];
     }
 }
 
 - (IBAction)doneButtonDidClick:(UIButton *)sender {
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(scanningDidEnd:)]) {
+        [self.delegate scanningDidEnd:self.bookItems.copy];
+    }
+    
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
-
 - (void)resumeSession {
     [session startRunning];
+}
+
+- (void)dealloc {
+//    NSLog(@"%s", __FUNCTION__);
 }
 
 @end
