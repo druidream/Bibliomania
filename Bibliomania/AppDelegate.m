@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "ListViewController.h"
+#import "REFrostedViewController.h"
+#import "BMDrawerViewController.h"
 
 
 @interface AppDelegate ()
@@ -18,7 +20,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[storyboard instantiateViewControllerWithIdentifier:@"ListViewController"]];
+    BMDrawerViewController *menuController = [storyboard instantiateViewControllerWithIdentifier:@"BMDrawerViewController"];
+    
+    REFrostedViewController *frostedViewController = [[REFrostedViewController alloc] initWithContentViewController:navigationController menuViewController:menuController];
+    frostedViewController.direction = REFrostedViewControllerDirectionLeft;
+    
+    self.window.rootViewController = frostedViewController;
+    
     return YES;
 }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SXt-ZK-MiT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pyU-2e-zUn">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -40,7 +40,7 @@
         <!--Bibliomania-->
         <scene sceneID="5mb-HB-L7J">
             <objects>
-                <tableViewController id="qgu-aw-NRJ" customClass="ListViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ListViewController" id="qgu-aw-NRJ" customClass="ListViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="jHa-XD-mTE">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,6 +63,9 @@
                     <navigationItem key="navigationItem" title="Bibliomania" id="3aD-ZS-ef0">
                         <barButtonItem key="leftBarButtonItem" image="drawer" id="RWv-Lz-pcN">
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="drawerButtonDidClick:" destination="qgu-aw-NRJ" id="5vO-yC-dah"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Scan" id="mGN-SY-C91">
                             <connections>
@@ -75,10 +78,10 @@
             </objects>
             <point key="canvasLocation" x="973" y="217"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail-->
         <scene sceneID="7dW-Kc-hyY">
             <objects>
-                <viewController storyboardIdentifier="BookDetailViewController" id="8nt-Nl-n32" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BookDetailViewController" title="Detail" id="8nt-Nl-n32" customClass="BMBookDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cND-VQ-jXi"/>
                         <viewControllerLayoutGuide type="bottom" id="iDz-tJ-GnW"/>
@@ -87,19 +90,108 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HWN-Uu-Jej">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="my title" id="fEP-Oe-5Cq"/>
-                                </items>
-                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wLK-yx-aMI">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wLK-yx-aMI" firstAttribute="bottom" secondItem="iDz-tJ-GnW" secondAttribute="top" id="0eF-yW-zAs"/>
+                            <constraint firstAttribute="trailing" secondItem="wLK-yx-aMI" secondAttribute="trailing" id="Rky-Il-FWj"/>
+                            <constraint firstItem="wLK-yx-aMI" firstAttribute="top" secondItem="Tlk-ic-Xxd" secondAttribute="top" id="dbk-YG-k50">
+                                <variation key="widthClass=compact" constant="64"/>
+                            </constraint>
+                            <constraint firstItem="wLK-yx-aMI" firstAttribute="leading" secondItem="Tlk-ic-Xxd" secondAttribute="leading" id="fwW-mJ-IBu"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="wLK-yx-aMI"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="0eF-yW-zAs"/>
+                                <exclude reference="Rky-Il-FWj"/>
+                                <exclude reference="dbk-YG-k50"/>
+                                <exclude reference="fwW-mJ-IBu"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="wLK-yx-aMI"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="0eF-yW-zAs"/>
+                                <include reference="Rky-Il-FWj"/>
+                                <include reference="dbk-YG-k50"/>
+                                <include reference="fwW-mJ-IBu"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="wLK-yx-aMI" id="kjF-0h-Xmy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j86-Ww-OKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1681" y="217"/>
+            <point key="canvasLocation" x="1687.5" y="179"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9Id-9g-Jcs">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="pyU-2e-zUn" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SED-7B-1YX"/>
+                        <viewControllerLayoutGuide type="bottom" id="UYS-aD-WIq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="snm-uF-YKD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVE-7i-3X8">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="114" y="133" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="testButtonDidClick:" destination="pyU-2e-zUn" eventType="touchUpInside" id="3Eb-Ie-ZSv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="LVE-7i-3X8"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="LVE-7i-3X8"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="eEJ-Hb-rXc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0bZ-7n-G4E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973" y="-491"/>
+        </scene>
+        <!--Drawer View Controller-->
+        <scene sceneID="5Ko-n7-N1p">
+            <objects>
+                <viewController storyboardIdentifier="BMDrawerViewController" id="3RX-aq-l08" customClass="BMDrawerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bjn-tL-0V0"/>
+                        <viewControllerLayoutGuide type="bottom" id="s79-O1-1lk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iIL-vA-uAv">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TAs-eX-RRB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-478.5" y="217"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6Hd-j8-Ivo">
@@ -110,12 +202,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="qgu-aw-NRJ" kind="relationship" relationship="rootViewController" id="uS9-GO-ocB"/>
+                        <segue destination="qgu-aw-NRJ" kind="relationship" relationship="rootViewController" id="GTw-lL-ufw"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="awv-7X-Cbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="258" y="217"/>
+            <point key="canvasLocation" x="234" y="217"/>
         </scene>
     </scenes>
     <resources>

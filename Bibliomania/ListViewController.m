@@ -12,6 +12,8 @@
 #import "Chapter+CoreDataProperties.h"
 #import "BMScanViewController.h"
 #import "BMDoubanJSONResult.h"
+#import "BMBookDetailViewController.h"
+#import "REFrostedViewController.h"
 
 #ifndef __OPTIMIZE__
 #import "RRFPSBar.h"
@@ -33,9 +35,9 @@ static NSString * const CELL_IDENTIFIER = @"bookItemCell";
     // Do any additional setup after loading the view from its nib.
     // Show only if app is is not optimized (aka debug build)
     
-#ifndef __OPTIMIZE__
-    [[RRFPSBar sharedInstance] setHidden:NO];
-#endif
+//#ifndef __OPTIMIZE__
+//    [[RRFPSBar sharedInstance] setHidden:NO];
+//#endif
     
     bookService = [[BookService alloc] init];
     bookItems = [bookService retrieveBooks];
@@ -97,7 +99,8 @@ static NSString * const CELL_IDENTIFIER = @"bookItemCell";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"BookDetailViewController"];
+    BMBookDetailViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"BookDetailViewController"];
+    vc.bookItem = [self.bookItems objectAtIndex:indexPath.row];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -124,6 +127,12 @@ static NSString * const CELL_IDENTIFIER = @"bookItemCell";
     
     self.bookItems = [bookService retrieveBooks];
     [self.tableView reloadData];
+}
+
+#pragma mark - events
+
+- (IBAction)drawerButtonDidClick:(id)sender {
+    [self.frostedViewController presentMenuViewController];
 }
 
 #pragma mark -

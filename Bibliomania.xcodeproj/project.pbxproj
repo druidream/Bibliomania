@@ -13,12 +13,13 @@
 		6A0158541C5A8F13007E4E70 /* BookItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A0158501C5A8F13007E4E70 /* BookItem.m */; };
 		6A0158571C5B20B9007E4E70 /* BookService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A0158561C5B20B9007E4E70 /* BookService.m */; };
 		6A0C74781C77F65D001D392B /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A0C74761C77F65D001D392B /* ListViewController.m */; };
-		6A0C747B1C77FEC2001D392B /* Brand Assets.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A0C747A1C77FEC2001D392B /* Brand Assets.png */; };
 		6A2A22671D7F17BE0006AB29 /* BMImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2A22661D7F17BE0006AB29 /* BMImageTransformer.m */; };
 		6A2A227A1D8005DC0006AB29 /* Chapter+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2A22771D8005DC0006AB29 /* Chapter+CoreDataProperties.m */; };
 		6A2A227B1D8005DC0006AB29 /* Chapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2A22791D8005DC0006AB29 /* Chapter.m */; };
 		6A2ADFEA1C7DFB9800D6F058 /* T6FHBhkK.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A2ADFE91C7DFB9800D6F058 /* T6FHBhkK.jpg */; };
 		6A4E8AB61D8145CF004D94A6 /* BMDoubanJSONResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A4E8AB51D8145CF004D94A6 /* BMDoubanJSONResult.m */; };
+		6A4E8ABA1D82584E004D94A6 /* BMDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A4E8AB91D82584E004D94A6 /* BMDrawerViewController.m */; };
+		6A4E8ABD1D82B6F9004D94A6 /* BMBookDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A4E8ABC1D82B6F9004D94A6 /* BMBookDetailViewController.m */; };
 		6A60642B1C89F4DA004ACC77 /* BMScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A60642A1C89F4DA004ACC77 /* BMScanViewController.m */; };
 		6A60642D1C89F952004ACC77 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A60642C1C89F952004ACC77 /* AVFoundation.framework */; };
 		6A9536861C57F1AE00C2D3F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A9536851C57F1AE00C2D3F1 /* main.m */; };
@@ -66,7 +67,6 @@
 		6A0158561C5B20B9007E4E70 /* BookService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookService.m; sourceTree = "<group>"; };
 		6A0C74751C77F65D001D392B /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		6A0C74761C77F65D001D392B /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
-		6A0C747A1C77FEC2001D392B /* Brand Assets.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Brand Assets.png"; sourceTree = "<group>"; };
 		6A2A22651D7F17BE0006AB29 /* BMImageTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMImageTransformer.h; sourceTree = "<group>"; };
 		6A2A22661D7F17BE0006AB29 /* BMImageTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMImageTransformer.m; sourceTree = "<group>"; };
 		6A2A22761D8005DC0006AB29 /* Chapter+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Chapter+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -76,6 +76,10 @@
 		6A2ADFE91C7DFB9800D6F058 /* T6FHBhkK.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = T6FHBhkK.jpg; sourceTree = "<group>"; };
 		6A4E8AB41D8145CF004D94A6 /* BMDoubanJSONResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMDoubanJSONResult.h; sourceTree = "<group>"; };
 		6A4E8AB51D8145CF004D94A6 /* BMDoubanJSONResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMDoubanJSONResult.m; sourceTree = "<group>"; };
+		6A4E8AB81D82584E004D94A6 /* BMDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMDrawerViewController.h; sourceTree = "<group>"; };
+		6A4E8AB91D82584E004D94A6 /* BMDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMDrawerViewController.m; sourceTree = "<group>"; };
+		6A4E8ABB1D82B6F9004D94A6 /* BMBookDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMBookDetailViewController.h; sourceTree = "<group>"; };
+		6A4E8ABC1D82B6F9004D94A6 /* BMBookDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMBookDetailViewController.m; sourceTree = "<group>"; };
 		6A6064291C89F4DA004ACC77 /* BMScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMScanViewController.h; sourceTree = "<group>"; };
 		6A60642A1C89F4DA004ACC77 /* BMScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMScanViewController.m; sourceTree = "<group>"; };
 		6A60642C1C89F952004ACC77 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -178,8 +182,12 @@
 				6A95368B1C57F1AE00C2D3F1 /* ViewController.m */,
 				6A0C74751C77F65D001D392B /* ListViewController.h */,
 				6A0C74761C77F65D001D392B /* ListViewController.m */,
+				6A4E8ABB1D82B6F9004D94A6 /* BMBookDetailViewController.h */,
+				6A4E8ABC1D82B6F9004D94A6 /* BMBookDetailViewController.m */,
 				6A6064291C89F4DA004ACC77 /* BMScanViewController.h */,
 				6A60642A1C89F4DA004ACC77 /* BMScanViewController.m */,
+				6A4E8AB81D82584E004D94A6 /* BMDrawerViewController.h */,
+				6A4E8AB91D82584E004D94A6 /* BMDrawerViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -243,7 +251,6 @@
 				6A9536871C57F1AE00C2D3F1 /* AppDelegate.h */,
 				6A9536881C57F1AE00C2D3F1 /* AppDelegate.m */,
 				6A9536951C57F1AE00C2D3F1 /* LaunchScreen.storyboard */,
-				6A0C747A1C77FEC2001D392B /* Brand Assets.png */,
 				6A2ADFE91C7DFB9800D6F058 /* T6FHBhkK.jpg */,
 				6A9536981C57F1AE00C2D3F1 /* Info.plist */,
 				6A9536851C57F1AE00C2D3F1 /* main.m */,
@@ -378,7 +385,6 @@
 			files = (
 				6A9536971C57F1AE00C2D3F1 /* LaunchScreen.storyboard in Resources */,
 				6A9536941C57F1AE00C2D3F1 /* Assets.xcassets in Resources */,
-				6A0C747B1C77FEC2001D392B /* Brand Assets.png in Resources */,
 				6A2ADFEA1C7DFB9800D6F058 /* T6FHBhkK.jpg in Resources */,
 				6A95368F1C57F1AE00C2D3F1 /* Main.storyboard in Resources */,
 			);
@@ -461,8 +467,10 @@
 				6A0C74781C77F65D001D392B /* ListViewController.m in Sources */,
 				6A9536BC1C57F26000C2D3F1 /* DoubanISBNResolver.m in Sources */,
 				6A0158521C5A8F13007E4E70 /* Tag.m in Sources */,
+				6A4E8ABA1D82584E004D94A6 /* BMDrawerViewController.m in Sources */,
 				6A2A227A1D8005DC0006AB29 /* Chapter+CoreDataProperties.m in Sources */,
 				6A9536891C57F1AE00C2D3F1 /* AppDelegate.m in Sources */,
+				6A4E8ABD1D82B6F9004D94A6 /* BMBookDetailViewController.m in Sources */,
 				6A0158531C5A8F13007E4E70 /* BookItem+CoreDataProperties.m in Sources */,
 				6A0158571C5B20B9007E4E70 /* BookService.m in Sources */,
 				6A9536861C57F1AE00C2D3F1 /* main.m in Sources */,

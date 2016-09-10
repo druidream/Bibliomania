@@ -15,30 +15,19 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - JSONModel (1.2.0)
-  - MMDrawerController (0.6.0):
-    - MMDrawerController/Core (= 0.6.0)
-    - MMDrawerController/MMDrawerBarButtonItem (= 0.6.0)
-    - MMDrawerController/MMDrawerVisualStates (= 0.6.0)
-    - MMDrawerController/Subclass (= 0.6.0)
-  - MMDrawerController/Core (0.6.0)
-  - MMDrawerController/MMDrawerBarButtonItem (0.6.0):
-    - MMDrawerController/Core
-  - MMDrawerController/MMDrawerVisualStates (0.6.0):
-    - MMDrawerController/Core
-  - MMDrawerController/Subclass (0.6.0):
-    - MMDrawerController/Core
+  - REFrostedViewController (2.4.8)
   - RRFPSBar (0.0.1)
 
 DEPENDENCIES:
   - AFNetworking
   - JSONModel
-  - MMDrawerController
+  - REFrostedViewController
   - RRFPSBar (~> 0.0.1)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
-  MMDrawerController: e3a54a5570388463ad3b36975251575b50c4e1a0
+  REFrostedViewController: a893b4979ba1f200c547aef9ff4c3fd5a18f5923
   RRFPSBar: 32fd2b11fb3d6ea90dc9a1424f964ea3851cd091
 
 COCOAPODS: 0.39.0
