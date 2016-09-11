@@ -67,7 +67,8 @@
                                 <action selector="drawerButtonDidClick:" destination="qgu-aw-NRJ" id="5vO-yC-dah"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Scan" id="mGN-SY-C91">
+                        <barButtonItem key="rightBarButtonItem" image="scan-icon" id="mGN-SY-C91">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="ieg-ld-srI" kind="presentation" identifier="scan" id="EPU-V5-nFP"/>
                             </connections>
@@ -186,8 +187,47 @@
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iIL-vA-uAv">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gD4-U0-aSY">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="gD4-U0-aSY" firstAttribute="top" secondItem="iIL-vA-uAv" secondAttribute="top" id="0h1-P7-2Q4">
+                                <variation key="widthClass=compact" constant="64"/>
+                            </constraint>
+                            <constraint firstItem="gD4-U0-aSY" firstAttribute="bottom" secondItem="s79-O1-1lk" secondAttribute="top" id="3wT-Ol-GjN"/>
+                            <constraint firstItem="gD4-U0-aSY" firstAttribute="leading" secondItem="iIL-vA-uAv" secondAttribute="leading" id="OhS-aT-klt"/>
+                            <constraint firstAttribute="trailing" secondItem="gD4-U0-aSY" secondAttribute="trailing" id="efE-KT-cbw"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="gD4-U0-aSY"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="0h1-P7-2Q4"/>
+                                <exclude reference="3wT-Ol-GjN"/>
+                                <exclude reference="OhS-aT-klt"/>
+                                <exclude reference="efE-KT-cbw"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="gD4-U0-aSY"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="0h1-P7-2Q4"/>
+                                <include reference="3wT-Ol-GjN"/>
+                                <include reference="OhS-aT-klt"/>
+                                <include reference="efE-KT-cbw"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="gD4-U0-aSY" id="65C-vR-VeU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TAs-eX-RRB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -212,5 +252,6 @@
     </scenes>
     <resources>
         <image name="drawer" width="24" height="24"/>
+        <image name="scan-icon" width="24" height="24"/>
     </resources>
 </document>
