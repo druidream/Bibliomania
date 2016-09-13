@@ -32,6 +32,7 @@
 		6A9536A21C57F1AE00C2D3F1 /* BibliomaniaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A9536A11C57F1AE00C2D3F1 /* BibliomaniaTests.m */; };
 		6A9536AD1C57F1AE00C2D3F1 /* BibliomaniaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A9536AC1C57F1AE00C2D3F1 /* BibliomaniaUITests.m */; };
 		6A9536BC1C57F26000C2D3F1 /* DoubanISBNResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A9536BB1C57F26000C2D3F1 /* DoubanISBNResolver.m */; };
+		6AEE5B071D86A3C7006FAECD /* BMDashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE5B061D86A3C7006FAECD /* BMDashboardViewController.m */; };
 		A5A17CC1C3A75C493F345CBA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A85B1F8D6D535919A96FEB2F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +103,8 @@
 		6A9536AE1C57F1AE00C2D3F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A9536BA1C57F26000C2D3F1 /* DoubanISBNResolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubanISBNResolver.h; sourceTree = "<group>"; };
 		6A9536BB1C57F26000C2D3F1 /* DoubanISBNResolver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubanISBNResolver.m; sourceTree = "<group>"; };
+		6AEE5B051D86A3C7006FAECD /* BMDashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMDashboardViewController.h; sourceTree = "<group>"; };
+		6AEE5B061D86A3C7006FAECD /* BMDashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMDashboardViewController.m; sourceTree = "<group>"; };
 		A85B1F8D6D535919A96FEB2F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -178,6 +181,8 @@
 		6A2A226B1D7F375E0006AB29 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6A4E8AB81D82584E004D94A6 /* BMDrawerViewController.h */,
+				6A4E8AB91D82584E004D94A6 /* BMDrawerViewController.m */,
 				6A95368A1C57F1AE00C2D3F1 /* ViewController.h */,
 				6A95368B1C57F1AE00C2D3F1 /* ViewController.m */,
 				6A0C74751C77F65D001D392B /* ListViewController.h */,
@@ -186,8 +191,8 @@
 				6A4E8ABC1D82B6F9004D94A6 /* BMBookDetailViewController.m */,
 				6A6064291C89F4DA004ACC77 /* BMScanViewController.h */,
 				6A60642A1C89F4DA004ACC77 /* BMScanViewController.m */,
-				6A4E8AB81D82584E004D94A6 /* BMDrawerViewController.h */,
-				6A4E8AB91D82584E004D94A6 /* BMDrawerViewController.m */,
+				6AEE5B051D86A3C7006FAECD /* BMDashboardViewController.h */,
+				6AEE5B061D86A3C7006FAECD /* BMDashboardViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -471,6 +476,7 @@
 				6A2A227A1D8005DC0006AB29 /* Chapter+CoreDataProperties.m in Sources */,
 				6A9536891C57F1AE00C2D3F1 /* AppDelegate.m in Sources */,
 				6A4E8ABD1D82B6F9004D94A6 /* BMBookDetailViewController.m in Sources */,
+				6AEE5B071D86A3C7006FAECD /* BMDashboardViewController.m in Sources */,
 				6A0158531C5A8F13007E4E70 /* BookItem+CoreDataProperties.m in Sources */,
 				6A0158571C5B20B9007E4E70 /* BookService.m in Sources */,
 				6A9536861C57F1AE00C2D3F1 /* main.m in Sources */,

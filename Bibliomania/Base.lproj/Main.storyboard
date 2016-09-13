@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Scan View Controller-->
@@ -36,6 +37,90 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ps-TN-ayq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="973" y="980"/>
+        </scene>
+        <!--Dashboard View Controller-->
+        <scene sceneID="udd-LR-Dah">
+            <objects>
+                <viewController storyboardIdentifier="BMDashboardViewController" automaticallyAdjustsScrollViewInsets="NO" id="m3c-QR-5bf" customClass="BMDashboardViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t51-qH-KMF"/>
+                        <viewControllerLayoutGuide type="bottom" id="3x6-jh-wrG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dBa-05-eb2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6eh-gC-dZN">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Frr-Gs-hsG"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Frr-Gs-hsG"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Frr-Gs-hsG"/>
+                                    </mask>
+                                </variation>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cYL-Ie-fJN">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="61" y="98" width="240" height="128"/>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6eh-gC-dZN" firstAttribute="leading" secondItem="dBa-05-eb2" secondAttribute="leading" id="2FD-At-qO9"/>
+                            <constraint firstItem="6eh-gC-dZN" firstAttribute="height" secondItem="dBa-05-eb2" secondAttribute="height" multiplier="0.5" id="E44-4S-bBt"/>
+                            <constraint firstItem="6eh-gC-dZN" firstAttribute="height" secondItem="dBa-05-eb2" secondAttribute="height" multiplier="0.5" id="JOK-9o-RD4"/>
+                            <constraint firstItem="6eh-gC-dZN" firstAttribute="top" secondItem="t51-qH-KMF" secondAttribute="bottom" constant="338" id="fd6-h6-ZGI"/>
+                            <constraint firstAttribute="trailing" secondItem="6eh-gC-dZN" secondAttribute="trailing" id="iKz-gn-tcJ"/>
+                            <constraint firstItem="6eh-gC-dZN" firstAttribute="bottom" secondItem="3x6-jh-wrG" secondAttribute="top" id="ur3-3U-Dbp"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="6eh-gC-dZN"/>
+                                <exclude reference="cYL-Ie-fJN"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="2FD-At-qO9"/>
+                                <exclude reference="E44-4S-bBt"/>
+                                <exclude reference="JOK-9o-RD4"/>
+                                <exclude reference="fd6-h6-ZGI"/>
+                                <exclude reference="iKz-gn-tcJ"/>
+                                <exclude reference="ur3-3U-Dbp"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="6eh-gC-dZN"/>
+                                <include reference="cYL-Ie-fJN"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="2FD-At-qO9"/>
+                                <exclude reference="E44-4S-bBt"/>
+                                <exclude reference="JOK-9o-RD4"/>
+                                <exclude reference="fd6-h6-ZGI"/>
+                                <include reference="iKz-gn-tcJ"/>
+                                <include reference="ur3-3U-Dbp"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="tbe-6T-wRX"/>
+                    <connections>
+                        <outlet property="tableView" destination="6eh-gC-dZN" id="iWi-AZ-oUI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="chc-A1-gUK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="-486"/>
         </scene>
         <!--Bibliomania-->
         <scene sceneID="5mb-HB-L7J">
@@ -134,7 +219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j86-Ww-OKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1687.5" y="179"/>
+            <point key="canvasLocation" x="1732.5" y="217"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9Id-9g-Jcs">
@@ -175,7 +260,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0bZ-7n-G4E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="973" y="-491"/>
+            <point key="canvasLocation" x="-478.5" y="991"/>
         </scene>
         <!--Drawer View Controller-->
         <scene sceneID="5Ko-n7-N1p">
@@ -186,6 +271,7 @@
                         <viewControllerLayoutGuide type="bottom" id="s79-O1-1lk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iIL-vA-uAv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gD4-U0-aSY">

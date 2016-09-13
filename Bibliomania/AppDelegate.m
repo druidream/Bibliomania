@@ -23,7 +23,7 @@
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[storyboard instantiateViewControllerWithIdentifier:@"ListViewController"]];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[storyboard instantiateViewControllerWithIdentifier:@"BMDashboardViewController"]];
     BMDrawerViewController *menuController = [storyboard instantiateViewControllerWithIdentifier:@"BMDrawerViewController"];
     
     REFrostedViewController *frostedViewController = [[REFrostedViewController alloc] initWithContentViewController:navigationController menuViewController:menuController];
