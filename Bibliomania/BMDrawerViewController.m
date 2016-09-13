@@ -7,6 +7,7 @@
 //
 
 #import "BMDrawerViewController.h"
+#import "REFrostedViewController.h"
 
 @interface BMDrawerViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -25,6 +26,7 @@ static NSString * const CELL_IDENTIFIER = @"drawerItemCell";
     self.drawerItems = [[NSMutableArray alloc] init];
     [self.drawerItems addObject:@"Dashboard"];
     [self.drawerItems addObject:@"Books"];
+    [self.drawerItems addObject:@"Timeline"];
     [self.drawerItems addObject:@"Tags"];
     [self.drawerItems addObject:@"Wishlist"];
     [self.drawerItems addObject:@"Settings"];
@@ -56,6 +58,28 @@ static NSString * const CELL_IDENTIFIER = @"drawerItemCell";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 70;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIViewController *vc = [UIApplication sharedApplication].keyWindow.rootViewController;
+    if ([vc isKindOfClass:REFrostedViewController.class]) {
+        REFrostedViewController *drawervc = (REFrostedViewController *)vc;
+        UINavigationController *nc;
+        
+        switch (indexPath.row) {
+            case 0:
+                nc =  [[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"BMDashboardViewController"]];
+                drawervc.contentViewController = nc;
+                break;
+            case 1:
+                nc =  [[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"BMBooksViewController.h"]];
+                drawervc.contentViewController = nc;
+                break;
+                
+            default:
+                break;
+        }
+    }
 }
 
 @end

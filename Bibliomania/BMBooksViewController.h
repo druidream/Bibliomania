@@ -1,5 +1,5 @@
 //
-//  ListViewController.h
+//  BMBooksViewController.h
 //  Bibliomania
 //
 //  Created by Gu Jun on 2/20/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ListViewController : UITableViewController<UITableViewDataSource, UITableViewDelegate>
+@interface BMBooksViewController : UITableViewController<UITableViewDataSource, UITableViewDelegate>
 
 @end

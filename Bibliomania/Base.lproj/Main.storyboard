@@ -67,13 +67,16 @@
                                     </mask>
                                 </variation>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cYL-Ie-fJN">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <button opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2o-U1-goL">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button" image="drawer"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="61" y="98" width="240" height="128"/>
+                                    <rect key="frame" x="20" y="28" width="24" height="24"/>
                                 </variation>
-                            </view>
+                                <connections>
+                                    <action selector="drawerButtonDidClick:" destination="m3c-QR-5bf" eventType="touchUpInside" id="dWB-pP-6pP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -87,7 +90,7 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="6eh-gC-dZN"/>
-                                <exclude reference="cYL-Ie-fJN"/>
+                                <exclude reference="y2o-U1-goL"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="2FD-At-qO9"/>
@@ -101,7 +104,7 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="6eh-gC-dZN"/>
-                                <include reference="cYL-Ie-fJN"/>
+                                <include reference="y2o-U1-goL"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="2FD-At-qO9"/>
@@ -113,7 +116,6 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="tbe-6T-wRX"/>
                     <connections>
                         <outlet property="tableView" destination="6eh-gC-dZN" id="iWi-AZ-oUI"/>
                     </connections>
@@ -125,7 +127,7 @@
         <!--Bibliomania-->
         <scene sceneID="5mb-HB-L7J">
             <objects>
-                <tableViewController storyboardIdentifier="ListViewController" id="qgu-aw-NRJ" customClass="ListViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="BMBooksViewController.h" id="qgu-aw-NRJ" customClass="BMBooksViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="jHa-XD-mTE">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

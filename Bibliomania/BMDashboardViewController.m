@@ -8,6 +8,7 @@
 
 #import "BMDashboardViewController.h"
 #import "UIColor+iOS7Colors.h"
+#import "REFrostedViewController.h"
 
 @interface BMDashboardViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -22,12 +23,18 @@ static NSString * const CELL_IDENTIFIER = @"cellIdentifer";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     self.progressArray = [[NSArray alloc] initWithObjects:@0.8, @0.65, @0.5, @0.3, @0.2, nil];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -45,7 +52,7 @@ static NSString * const CELL_IDENTIFIER = @"cellIdentifer";
         [cell.contentView addSubview:backgroundView];
         [cell.contentView sendSubviewToBack:backgroundView];
         
-        [UIView animateWithDuration:1.0 delay:delay options:UIViewAnimationOptionCurveEaseOut animations:^{
+        [UIView animateWithDuration:0.8 delay:delay options:UIViewAnimationOptionCurveEaseOut animations:^{
             CGFloat toWidth = CGRectGetWidth(cell.contentView.frame) * [self.progressArray objectAtIndex:i].doubleValue;
             CGRect toFrame = cell.contentView.frame;
             toFrame.size.width = toWidth;
@@ -78,6 +85,13 @@ static NSString * const CELL_IDENTIFIER = @"cellIdentifer";
     return CGRectGetHeight(self.tableView.frame) / 5;
 }
 
+#pragma mark - Events
+
+- (IBAction)drawerButtonDidClick:(id)sender {
+    [self.frostedViewController presentMenuViewController];
+}
+
+#pragma mark - private methods
 
 - (UIColor *)randomColor {
     NSArray<UIColor *> *colors = [NSArray arrayWithObjects:[UIColor iOS7lightBlueColor],

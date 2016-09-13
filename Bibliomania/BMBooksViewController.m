@@ -1,12 +1,12 @@
 //
-//  ListViewController.m
+//  BMBooksViewController.m
 //  Bibliomania
 //
 //  Created by Gu Jun on 2/20/16.
 //  Copyright © 2016 com.dream. All rights reserved.
 //
 
-#import "ListViewController.h"
+#import "BMBooksViewController.h"
 #import "BookService.h"
 #import "Chapter.h"
 #import "Chapter+CoreDataProperties.h"
@@ -18,14 +18,14 @@
 #ifndef __OPTIMIZE__
 #import "RRFPSBar.h"
 #endif
-@interface ListViewController () <BMScanViewControllerDelegate>
+@interface BMBooksViewController () <BMScanViewControllerDelegate>
 
 @property (nonatomic, copy) NSArray *bookItems;
 @property (nonatomic, strong) BookService *bookService;
 
 @end
 
-@implementation ListViewController
+@implementation BMBooksViewController
 @synthesize bookItems, bookService;
 
 static NSString * const CELL_IDENTIFIER = @"bookItemCell";

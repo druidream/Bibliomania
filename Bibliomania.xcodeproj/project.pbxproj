@@ -12,7 +12,8 @@
 		6A0158531C5A8F13007E4E70 /* BookItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A01584E1C5A8F13007E4E70 /* BookItem+CoreDataProperties.m */; };
 		6A0158541C5A8F13007E4E70 /* BookItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A0158501C5A8F13007E4E70 /* BookItem.m */; };
 		6A0158571C5B20B9007E4E70 /* BookService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A0158561C5B20B9007E4E70 /* BookService.m */; };
-		6A0C74781C77F65D001D392B /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A0C74761C77F65D001D392B /* ListViewController.m */; };
+		6A0513391D87D8D600FF317F /* BMTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A0513381D87D8D600FF317F /* BMTimelineViewController.m */; };
+		6A0C74781C77F65D001D392B /* BMBooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A0C74761C77F65D001D392B /* BMBooksViewController.m */; };
 		6A2A22671D7F17BE0006AB29 /* BMImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2A22661D7F17BE0006AB29 /* BMImageTransformer.m */; };
 		6A2A227A1D8005DC0006AB29 /* Chapter+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2A22771D8005DC0006AB29 /* Chapter+CoreDataProperties.m */; };
 		6A2A227B1D8005DC0006AB29 /* Chapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2A22791D8005DC0006AB29 /* Chapter.m */; };
@@ -66,8 +67,10 @@
 		6A0158501C5A8F13007E4E70 /* BookItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookItem.m; sourceTree = "<group>"; };
 		6A0158551C5B20B9007E4E70 /* BookService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookService.h; sourceTree = "<group>"; };
 		6A0158561C5B20B9007E4E70 /* BookService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookService.m; sourceTree = "<group>"; };
-		6A0C74751C77F65D001D392B /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
-		6A0C74761C77F65D001D392B /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		6A0513371D87D8D600FF317F /* BMTimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTimelineViewController.h; sourceTree = "<group>"; };
+		6A0513381D87D8D600FF317F /* BMTimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTimelineViewController.m; sourceTree = "<group>"; };
+		6A0C74751C77F65D001D392B /* BMBooksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMBooksViewController.h; sourceTree = "<group>"; };
+		6A0C74761C77F65D001D392B /* BMBooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMBooksViewController.m; sourceTree = "<group>"; };
 		6A2A22651D7F17BE0006AB29 /* BMImageTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMImageTransformer.h; sourceTree = "<group>"; };
 		6A2A22661D7F17BE0006AB29 /* BMImageTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMImageTransformer.m; sourceTree = "<group>"; };
 		6A2A22761D8005DC0006AB29 /* Chapter+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Chapter+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -183,16 +186,18 @@
 			children = (
 				6A4E8AB81D82584E004D94A6 /* BMDrawerViewController.h */,
 				6A4E8AB91D82584E004D94A6 /* BMDrawerViewController.m */,
+				6AEE5B051D86A3C7006FAECD /* BMDashboardViewController.h */,
+				6AEE5B061D86A3C7006FAECD /* BMDashboardViewController.m */,
+				6A0C74751C77F65D001D392B /* BMBooksViewController.h */,
+				6A0C74761C77F65D001D392B /* BMBooksViewController.m */,
+				6A0513371D87D8D600FF317F /* BMTimelineViewController.h */,
+				6A0513381D87D8D600FF317F /* BMTimelineViewController.m */,
 				6A95368A1C57F1AE00C2D3F1 /* ViewController.h */,
 				6A95368B1C57F1AE00C2D3F1 /* ViewController.m */,
-				6A0C74751C77F65D001D392B /* ListViewController.h */,
-				6A0C74761C77F65D001D392B /* ListViewController.m */,
 				6A4E8ABB1D82B6F9004D94A6 /* BMBookDetailViewController.h */,
 				6A4E8ABC1D82B6F9004D94A6 /* BMBookDetailViewController.m */,
 				6A6064291C89F4DA004ACC77 /* BMScanViewController.h */,
 				6A60642A1C89F4DA004ACC77 /* BMScanViewController.m */,
-				6AEE5B051D86A3C7006FAECD /* BMDashboardViewController.h */,
-				6AEE5B061D86A3C7006FAECD /* BMDashboardViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -242,6 +247,8 @@
 				6A2A226B1D7F375E0006AB29 /* Controllers */,
 				6A2A226C1D7F377A0006AB29 /* Views */,
 				6A4E8AB71D8148A1004D94A6 /* Helpers */,
+				6A9536871C57F1AE00C2D3F1 /* AppDelegate.h */,
+				6A9536881C57F1AE00C2D3F1 /* AppDelegate.m */,
 				6A95368D1C57F1AE00C2D3F1 /* Main.storyboard */,
 				6A9536931C57F1AE00C2D3F1 /* Assets.xcassets */,
 				6A9536901C57F1AE00C2D3F1 /* Bibliomania.xcdatamodeld */,
@@ -253,8 +260,6 @@
 		6A9536841C57F1AE00C2D3F1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6A9536871C57F1AE00C2D3F1 /* AppDelegate.h */,
-				6A9536881C57F1AE00C2D3F1 /* AppDelegate.m */,
 				6A9536951C57F1AE00C2D3F1 /* LaunchScreen.storyboard */,
 				6A2ADFE91C7DFB9800D6F058 /* T6FHBhkK.jpg */,
 				6A9536981C57F1AE00C2D3F1 /* Info.plist */,
@@ -469,7 +474,8 @@
 				6A0158511C5A8F13007E4E70 /* Tag+CoreDataProperties.m in Sources */,
 				6A2A22671D7F17BE0006AB29 /* BMImageTransformer.m in Sources */,
 				6A95368C1C57F1AE00C2D3F1 /* ViewController.m in Sources */,
-				6A0C74781C77F65D001D392B /* ListViewController.m in Sources */,
+				6A0C74781C77F65D001D392B /* BMBooksViewController.m in Sources */,
+				6A0513391D87D8D600FF317F /* BMTimelineViewController.m in Sources */,
 				6A9536BC1C57F26000C2D3F1 /* DoubanISBNResolver.m in Sources */,
 				6A0158521C5A8F13007E4E70 /* Tag.m in Sources */,
 				6A4E8ABA1D82584E004D94A6 /* BMDrawerViewController.m in Sources */,

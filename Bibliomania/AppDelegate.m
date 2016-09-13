@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ListViewController.h"
+#import "BMBooksViewController.h"
 #import "REFrostedViewController.h"
 #import "BMDrawerViewController.h"
 
@@ -23,7 +23,7 @@
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[storyboard instantiateViewControllerWithIdentifier:@"BMDashboardViewController"]];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[storyboard instantiateViewControllerWithIdentifier:@"BMBooksViewController.h"]];
     BMDrawerViewController *menuController = [storyboard instantiateViewControllerWithIdentifier:@"BMDrawerViewController"];
     
     REFrostedViewController *frostedViewController = [[REFrostedViewController alloc] initWithContentViewController:navigationController menuViewController:menuController];
