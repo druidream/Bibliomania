@@ -13,6 +13,7 @@
 		6A0158541C5A8F13007E4E70 /* BookItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A0158501C5A8F13007E4E70 /* BookItem.m */; };
 		6A0158571C5B20B9007E4E70 /* BookService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A0158561C5B20B9007E4E70 /* BookService.m */; };
 		6A0513391D87D8D600FF317F /* BMTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A0513381D87D8D600FF317F /* BMTimelineViewController.m */; };
+		6A05133C1D87E6F900FF317F /* BMEditCatalogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A05133B1D87E6F900FF317F /* BMEditCatalogViewController.m */; };
 		6A0C74781C77F65D001D392B /* BMBooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A0C74761C77F65D001D392B /* BMBooksViewController.m */; };
 		6A2A22671D7F17BE0006AB29 /* BMImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2A22661D7F17BE0006AB29 /* BMImageTransformer.m */; };
 		6A2A227A1D8005DC0006AB29 /* Chapter+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2A22771D8005DC0006AB29 /* Chapter+CoreDataProperties.m */; };
@@ -69,6 +70,8 @@
 		6A0158561C5B20B9007E4E70 /* BookService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookService.m; sourceTree = "<group>"; };
 		6A0513371D87D8D600FF317F /* BMTimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTimelineViewController.h; sourceTree = "<group>"; };
 		6A0513381D87D8D600FF317F /* BMTimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTimelineViewController.m; sourceTree = "<group>"; };
+		6A05133A1D87E6F900FF317F /* BMEditCatalogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMEditCatalogViewController.h; sourceTree = "<group>"; };
+		6A05133B1D87E6F900FF317F /* BMEditCatalogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMEditCatalogViewController.m; sourceTree = "<group>"; };
 		6A0C74751C77F65D001D392B /* BMBooksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMBooksViewController.h; sourceTree = "<group>"; };
 		6A0C74761C77F65D001D392B /* BMBooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMBooksViewController.m; sourceTree = "<group>"; };
 		6A2A22651D7F17BE0006AB29 /* BMImageTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMImageTransformer.h; sourceTree = "<group>"; };
@@ -196,6 +199,8 @@
 				6A95368B1C57F1AE00C2D3F1 /* ViewController.m */,
 				6A4E8ABB1D82B6F9004D94A6 /* BMBookDetailViewController.h */,
 				6A4E8ABC1D82B6F9004D94A6 /* BMBookDetailViewController.m */,
+				6A05133A1D87E6F900FF317F /* BMEditCatalogViewController.h */,
+				6A05133B1D87E6F900FF317F /* BMEditCatalogViewController.m */,
 				6A6064291C89F4DA004ACC77 /* BMScanViewController.h */,
 				6A60642A1C89F4DA004ACC77 /* BMScanViewController.m */,
 			);
@@ -471,6 +476,7 @@
 			files = (
 				6A4E8AB61D8145CF004D94A6 /* BMDoubanJSONResult.m in Sources */,
 				6A60642B1C89F4DA004ACC77 /* BMScanViewController.m in Sources */,
+				6A05133C1D87E6F900FF317F /* BMEditCatalogViewController.m in Sources */,
 				6A0158511C5A8F13007E4E70 /* Tag+CoreDataProperties.m in Sources */,
 				6A2A22671D7F17BE0006AB29 /* BMImageTransformer.m in Sources */,
 				6A95368C1C57F1AE00C2D3F1 /* ViewController.m in Sources */,

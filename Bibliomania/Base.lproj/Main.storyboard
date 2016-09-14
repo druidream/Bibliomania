@@ -140,6 +140,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="8nt-Nl-n32" kind="show" identifier="showDetail" id="nOO-zN-Ee8"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -215,6 +218,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="pWS-z1-tUT">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="mwJ-X8-phe">
+                            <connections>
+                                <segue destination="xpM-Lh-Qrs" kind="show" id="DFH-4b-pMG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="wLK-yx-aMI" id="kjF-0h-Xmy"/>
                     </connections>
@@ -222,6 +232,86 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j86-Ww-OKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1732.5" y="217"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hAs-Cz-aPq">
+            <objects>
+                <viewController id="xpM-Lh-Qrs" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GqJ-pD-UpF"/>
+                        <viewControllerLayoutGuide type="bottom" id="flo-Zz-sDT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Yoa-fL-rHr">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wa4-8Q-oJf">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Lorem ipsum dolor s it er elit lamet, consect etaur cillium adipisicing  pecu, sed do eiusmod tempor incididunt ut labore et dolo re magn a aliqua. Ut enim ad minim veniam, quis nostrud exercitation  ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="72" width="360" height="1138"/>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="wa4-8Q-oJf" secondAttribute="bottom" constant="20" symbolic="YES" id="0Nz-W4-2jS"/>
+                            <constraint firstAttribute="trailing" secondItem="wa4-8Q-oJf" secondAttribute="trailing" id="8nw-rq-79a"/>
+                            <constraint firstItem="wa4-8Q-oJf" firstAttribute="top" secondItem="GqJ-pD-UpF" secondAttribute="bottom" constant="8" symbolic="YES" id="Hqs-nG-zuB"/>
+                            <constraint firstItem="wa4-8Q-oJf" firstAttribute="trailing" secondItem="Yoa-fL-rHr" secondAttribute="trailingMargin" id="MYb-69-sMi"/>
+                            <constraint firstItem="wa4-8Q-oJf" firstAttribute="trailing" secondItem="Yoa-fL-rHr" secondAttribute="trailingMargin" id="RmC-Sh-ca1"/>
+                            <constraint firstItem="flo-Zz-sDT" firstAttribute="top" secondItem="wa4-8Q-oJf" secondAttribute="bottom" constant="8" symbolic="YES" id="RsN-4C-Bxj"/>
+                            <constraint firstItem="wa4-8Q-oJf" firstAttribute="top" secondItem="GqJ-pD-UpF" secondAttribute="bottom" constant="8" symbolic="YES" id="bhO-j3-iuN">
+                                <variation key="widthClass=compact" constant="-44"/>
+                            </constraint>
+                            <constraint firstItem="wa4-8Q-oJf" firstAttribute="leading" secondItem="Yoa-fL-rHr" secondAttribute="leadingMargin" id="dgc-vN-EgA"/>
+                            <constraint firstItem="wa4-8Q-oJf" firstAttribute="leading" secondItem="Yoa-fL-rHr" secondAttribute="leadingMargin" id="fJS-FU-GGE"/>
+                            <constraint firstItem="wa4-8Q-oJf" firstAttribute="leading" secondItem="Yoa-fL-rHr" secondAttribute="leading" id="muE-zm-cvo"/>
+                            <constraint firstItem="flo-Zz-sDT" firstAttribute="top" secondItem="wa4-8Q-oJf" secondAttribute="bottom" constant="8" symbolic="YES" id="yvx-ew-bal"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="wa4-8Q-oJf"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="0Nz-W4-2jS"/>
+                                <exclude reference="8nw-rq-79a"/>
+                                <exclude reference="Hqs-nG-zuB"/>
+                                <exclude reference="MYb-69-sMi"/>
+                                <exclude reference="RmC-Sh-ca1"/>
+                                <exclude reference="bhO-j3-iuN"/>
+                                <exclude reference="dgc-vN-EgA"/>
+                                <exclude reference="fJS-FU-GGE"/>
+                                <exclude reference="muE-zm-cvo"/>
+                                <exclude reference="RsN-4C-Bxj"/>
+                                <exclude reference="yvx-ew-bal"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="wa4-8Q-oJf"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="0Nz-W4-2jS"/>
+                                <exclude reference="8nw-rq-79a"/>
+                                <include reference="Hqs-nG-zuB"/>
+                                <include reference="MYb-69-sMi"/>
+                                <exclude reference="RmC-Sh-ca1"/>
+                                <exclude reference="bhO-j3-iuN"/>
+                                <include reference="dgc-vN-EgA"/>
+                                <exclude reference="fJS-FU-GGE"/>
+                                <exclude reference="muE-zm-cvo"/>
+                                <include reference="RsN-4C-Bxj"/>
+                                <exclude reference="yvx-ew-bal"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LFb-Z6-60u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2478" y="217"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9Id-9g-Jcs">
@@ -328,6 +418,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cuc-wD-vBY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.95294117647058818" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="qgu-aw-NRJ" kind="relationship" relationship="rootViewController" id="GTw-lL-ufw"/>

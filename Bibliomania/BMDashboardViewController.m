@@ -24,6 +24,9 @@ static NSString * const CELL_IDENTIFIER = @"cellIdentifer";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor colorWithRed:247/255. green:243./255. blue:240/255. alpha:1];
+    self.tableView.backgroundColor = [UIColor colorWithRed:247/255. green:243./255. blue:240/255. alpha:1];
+    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -77,6 +80,7 @@ static NSString * const CELL_IDENTIFIER = @"cellIdentifer";
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.textLabel.text = @"12";
+    cell.backgroundColor = [UIColor colorWithRed:247/255. green:243./255. blue:240/255. alpha:1];
     
     return cell;
 }

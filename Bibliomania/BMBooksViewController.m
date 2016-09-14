@@ -68,7 +68,14 @@ static NSString * const CELL_IDENTIFIER = @"bookItemCell";
     if ([segue.identifier isEqualToString:@"scan"]) {
         BMScanViewController *vc = (BMScanViewController *)segue.destinationViewController;
         vc.delegate = self;
+    } else if ([segue.identifier isEqualToString:@"showDetail"]) {
+        BMBookDetailViewController *vc = (BMBookDetailViewController *)segue.destinationViewController;
+        if ([sender isKindOfClass:UITableViewCell.class]) {
+            NSUInteger index = ((UITableViewCell *)sender).tag;
+            vc.bookItem = [bookItems objectAtIndex:index];
+        }
     }
+        
 }
 
 #pragma mark - TableView delegates
@@ -78,6 +85,7 @@ static NSString * const CELL_IDENTIFIER = @"bookItemCell";
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CELL_IDENTIFIER];
     }
+    cell.tag = indexPath.row;
     
     BookItem *bookItem = [bookItems objectAtIndex:indexPath.row];
     [cell.textLabel setText:bookItem.name];
@@ -96,12 +104,6 @@ static NSString * const CELL_IDENTIFIER = @"bookItemCell";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 70;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    BMBookDetailViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"BookDetailViewController"];
-    vc.bookItem = [self.bookItems objectAtIndex:indexPath.row];
-    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - BMScanViewControllerDelegate

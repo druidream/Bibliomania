@@ -31,6 +31,8 @@
     
     self.window.rootViewController = frostedViewController;
     
+    [UINavigationBar appearance].barTintColor = [UIColor colorWithRed:247/255. green:243./255. blue:240/255. alpha:1];
+    
     return YES;
 }
 
